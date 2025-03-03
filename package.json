@@ -17,5 +17,9 @@
         "path": "./themes/TimNekk-dark-color-theme.json"
       }
     ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/TimNekk/timnekk-theme"
   }
 }
