@@ -1,14 +1,18 @@
 {
   "name": "timnekk-theme",
   "displayName": "TimNekk Theme",
-  "description": "TimNekk Theme Description",
-  "version": "0.0.1",
+  "description": "TimNekk's Personal Theme",
+  "author": {
+    "name": "TimNekk"
+  },
+  "version": "0.0.2",
   "engines": {
-    "vscode": "^1.97.0"
+    "vscode": "^1.0.0"
   },
   "categories": [
     "Themes"
   ],
+  "icon": "images/icon.png",
   "contributes": {
     "themes": [
       {
