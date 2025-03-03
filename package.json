@@ -1,0 +1,21 @@
+{
+  "name": "timnekk-theme",
+  "displayName": "TimNekk Theme",
+  "description": "TimNekk Theme Description",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.97.0"
+  },
+  "categories": [
+    "Themes"
+  ],
+  "contributes": {
+    "themes": [
+      {
+        "label": "TimNekk Dark",
+        "uiTheme": "vs-dark",
+        "path": "./themes/TimNekk-dark-color-theme.json"
+      }
+    ]
+  }
+}
