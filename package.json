@@ -1,29 +1,45 @@
 {
-  "name": "timnekk-theme",
-  "displayName": "TimNekk Theme",
-  "description": "TimNekk's Personal Theme",
-  "author": {
-    "name": "TimNekk"
-  },
-  "version": "0.0.2",
-  "engines": {
-    "vscode": "^1.0.0"
-  },
-  "categories": [
-    "Themes"
-  ],
-  "icon": "images/icon.png",
-  "contributes": {
-    "themes": [
-      {
-        "label": "TimNekk Dark",
-        "uiTheme": "vs-dark",
-        "path": "./themes/TimNekk-dark-color-theme.json"
-      }
-    ]
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/TimNekk/timnekk-theme"
-  }
+    "name": "timnekk-theme",
+    "displayName": "TimNekk Theme",
+    "description": "TimNekk's Personal Theme",
+    "author": {
+        "name": "TimNekk"
+    },
+    "publisher": "TimNekk",
+    "version": "1.0.0",
+    "engines": {
+        "vscode": "^1.87.0"
+    },
+    "categories": [
+        "Themes"
+    ],
+    "icon": "images/icon.png",
+    "license": "MIT",
+    "keywords": [
+        "theme",
+        "color theme",
+        "dark theme"
+    ],
+    "galleryBanner": {
+        "color": "#1e1e2e",
+        "theme": "dark"
+    },
+    "homepage": "https://github.com/TimNekk/timnekk-theme",
+    "contributes": {
+        "themes": [
+            {
+                "label": "TimNekk Dark",
+                "uiTheme": "vs-dark",
+                "path": "./themes/TimNekk-dark-color-theme.json"
+            }
+        ]
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/TimNekk/timnekk-theme"
+    },
+    "devDependencies": {
+        "@vscode/vsce": "^3.7.1",
+        "ovsx": "^0.10.10"
+    }
 }
