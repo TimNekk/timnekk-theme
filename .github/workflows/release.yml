@@ -52,13 +52,27 @@ jobs:
 
             - name: Publish to VS Code Marketplace
               if: steps.tag_check.outputs.exists == 'false'
-              run: npx vsce publish --no-dependencies --packagePath "${{ steps.package.outputs.vsix }}"
               env:
                   VSCE_PAT: ${{ secrets.VSCE_PAT }}
+              run: |
+                  set +e
+                  OUTPUT=$(npx vsce publish --no-dependencies --packagePath "${{ steps.package.outputs.vsix }}" 2>&1)
+                  EXIT_CODE=$?
+                  echo "$OUTPUT"
+                  if [ $EXIT_CODE -ne 0 ] && ! echo "$OUTPUT" | grep -q "already exists"; then
+                  exit $EXIT_CODE
+                  fi
 
             - name: Publish to Open VSX Registry
               if: steps.tag_check.outputs.exists == 'false'
-              run: npx ovsx publish "${{ steps.package.outputs.vsix }}" --pat ${{ secrets.OVSX_PAT }}
+              run: |
+                  set +e
+                  OUTPUT=$(npx ovsx publish "${{ steps.package.outputs.vsix }}" --pat ${{ secrets.OVSX_PAT }} 2>&1)
+                  EXIT_CODE=$?
+                  echo "$OUTPUT"
+                  if [ $EXIT_CODE -ne 0 ] && ! echo "$OUTPUT" | grep -q "already exists"; then
+                  exit $EXIT_CODE
+                  fi
 
             - name: Create GitHub Release
               if: steps.tag_check.outputs.exists == 'false'
