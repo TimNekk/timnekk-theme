@@ -6,7 +6,7 @@
 
 A personal dark theme for Visual Studio Code, inspired by Material Darker Theme.
 
-[VS Code Marketplace](https://marketplace.visualstudio.com/items?itemName=TimNekk.timnekk-theme) · [Open VSX](https://open-vsx.org/extension/TimNekk/timnekk-theme) · [Releases](https://github.com/TimNekk/timnekk-theme/releases)
+[VS Code Marketplace](https://marketplace.visualstudio.com/items?itemName=TimNekk.timnekk-theme) · [Open VSX](https://open-vsx.org/extension/TimNekk/timnekk-theme) · [Changelog](./CHANGELOG.md) · [Releases](https://github.com/TimNekk/timnekk-theme/releases)
 
 </div>
 
